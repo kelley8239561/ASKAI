@@ -217,15 +217,16 @@ def speechMain():
     return
 
 async def speech():
-    audioToSpeechTask = asyncio.create_task(audioToSpeech())
     textToAudioTask = asyncio.create_task(textToAudio())
+    audioToSpeechTask = asyncio.create_task(audioToSpeech())
+    
     print(os.getpid(),threading.currentThread().ident,'Start async speech')
-    await asyncio.gather(textToAudioTask,audioToSpeechTask)
+    await asyncio.gather(audioToSpeechTask,textToAudioTask)
     print(os.getpid(),threading.currentThread().ident,'End async speech')
 
 async def audioToSpeech():
     # For Test
-    print(os.getpid(),threading.currentThread().ident,'In audioToSpeech')
+    print(os.getpid(),threading.currentThread().ident,'Start Audio to Speech')
     # 进程间共享空间地址引用
     global localShareZone
     # audio操作实例
