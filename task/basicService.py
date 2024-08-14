@@ -147,6 +147,22 @@ class BasicServiceThread(Thread):
     def main():
         pass  
 
+class TextService():
+    """
+    _summary_
+    Operations about the Text
+    """
+    def __init__(self) -> None:
+        pass
+    
+    def start():
+        pass
+    
+    def stop():
+        pass
+    
+    def main():
+        pass
 
 
 

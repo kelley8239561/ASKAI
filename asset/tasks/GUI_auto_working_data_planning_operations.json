@@ -1,0 +1,28 @@
+{
+    "current_shot":"image url/image tensor",
+    "task_instruction":"task instructions",
+    "task_objective":"task objective",
+    "last_operations":[
+        {
+            "action_type":"km-输入设备/api-app接口/template-模板/success-完成",
+            "action_id":"km_id/api_url/template_id/",
+            "bbox":"(left_up_x,left_up_y,right_down_x,right_down_y)",
+            "……":"……"
+        },
+        {
+            "action_type":"km-输入设备/api-app接口/template-模板/success-完成",
+            "action_id":"km_id/api_url/template_id/",
+            "bbox":"(left_up_x,left_up_y,right_down_x,right_down_y)",
+            "……":"……"
+        },
+        {
+            "……":"……"
+        }
+    ],
+    "next_operation":{
+        "action_type":"km-输入设备/api-app接口/template-模板/success-完成",
+        "action_id":"km_id/api_url/template_id/",
+        "bbox":"(left_up_x,left_up_y,right_down_x,right_down_y)",
+        "……":"……"
+    }
+}

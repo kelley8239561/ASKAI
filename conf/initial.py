@@ -28,15 +28,15 @@ class config:
                 self.configData[url.split('/')[-1].split('.')[0]] = yaml.safe_load(file)
 
 # 临时变量存储
-myConfig:config
+myConfig = config()
 
 def initial():
     # 初始化配置
     global myConfig
-    myConfig = config()
     urls = [
         'conf/mainServiceConfig.yaml',
         'conf/voiceListenServiceConfig.yaml',
+        'conf/screenRecordServiceConfig.yaml'
     ]
     # config文件路径
     

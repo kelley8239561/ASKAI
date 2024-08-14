@@ -8,7 +8,9 @@ import threading
 import time,psutil
 
 """
-Call mic and speaker for audio processing
+_summary_
+mic and speaker control which can be used by the assistant
+
 """
 
 class AudioService():

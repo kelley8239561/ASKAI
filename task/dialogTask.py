@@ -14,10 +14,13 @@ from langchain_community.chat_models import ChatZhipuAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_core.callbacks.manager import CallbackManager
 from langchain_core.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain_core.callbacks import StdOutCallbackHandler
 from langchain.memory import ConversationBufferMemory
 from langchain.chains.conversation.base import ConversationChain
-from task.prompts import chatPrompts
+from task.parser import taskParser
+from task.prompts import chatPrompts,taskPrompts
 from langchain_core.output_parsers import StrOutputParser
+from langchain.output_parsers import OutputFixingParser,RetryWithErrorOutputParser
 
 #定义监听的按键为'space'空格键
 buttonName = 'ctrl'
@@ -37,10 +40,11 @@ def simpleChat(userMessage,model=('Zhipuai','glm-4-flash'),):
         model=model[1],
         temperature=0.5,
         streaming=True,
-        callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]),
+        callback_manager=CallbackManager([StdOutCallbackHandler()]),
     )
     promptForChat = chatPrompts.simpleChatPrompt
     outputParserForChat = StrOutputParser()
+    # fixingParser = OutputFixingParser(parser=outputParserForChat).from_llm(llm=llmForChat,parser=outputParserForChat)
     chatChain = promptForChat | llmForChat | outputParserForChat
     return chatChain.stream(
         {
@@ -68,9 +72,6 @@ def simpleChat(userMessage,model=('Zhipuai','glm-4-flash'),):
         # print(response.content,end='')
         yield response.content
     '''
-
-
-
 
 class AudioDialog():
     """

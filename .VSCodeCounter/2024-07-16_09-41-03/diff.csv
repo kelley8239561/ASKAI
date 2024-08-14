@@ -1,0 +1,14 @@
+"filename", "language", "Python", "YAML", "SQL", "comment", "blank", "total"
+"d:\KAIShow Tech\20240605ASK\ASK\asset\tasks\AddTask07132325.sql", "SQL", 0, 0, 5, 0, 0, 5
+"d:\KAIShow Tech\20240605ASK\ASK\asset\tasks\deleteAll.sql", "SQL", 0, 0, 1, 0, 0, 1
+"d:\KAIShow Tech\20240605ASK\ASK\asset\tasks\selectAll.sql", "SQL", 0, 0, 1, 0, 0, 1
+"d:\KAIShow Tech\20240605ASK\ASK\conf\mainServiceConfig.yaml", "YAML", 0, -8, 0, 8, 0, 0
+"d:\KAIShow Tech\20240605ASK\ASK\database\db.py", "Python", 62, 0, 0, 1, 9, 72
+"d:\KAIShow Tech\20240605ASK\ASK\dbTest.py", "Python", 9, 0, 0, 0, 3, 12
+"d:\KAIShow Tech\20240605ASK\ASK\main.py", "Python", 20, 0, 0, 5, 6, 31
+"d:\KAIShow Tech\20240605ASK\ASK\task\keyboardService.py", "Python", 3, 0, 0, 3, 0, 6
+"d:\KAIShow Tech\20240605ASK\ASK\task\prompts\chatPrompts.py", "Python", 78, 0, 0, 8, 10, 96
+"d:\KAIShow Tech\20240605ASK\ASK\task\serviceManager.py", "Python", -6, 0, 0, -3, 2, -7
+"d:\KAIShow Tech\20240605ASK\ASK\task\taskManager.py", "Python", 36, 0, 0, 11, 10, 57
+"d:\KAIShow Tech\20240605ASK\ASK\task\timerService.py", "Python", 0, 0, 0, 0, 1, 1
+"Total", "-", 202, -8, 7, 33, 41, 275

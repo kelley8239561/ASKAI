@@ -43,7 +43,7 @@ def listenMain(shareZone,serviceRunningList,subServicesToRun,):
     
     print(os.getpid(),'Start listen')
     print(os.getpid(),shareZone)
-    # 0 获取配置列表
+    # 0 获取配置列表（需要优化）
     myConfig = initial.config()
     # print(subServicesToRun[-1]) # for Test
     print(os.getpid(),'The url is:',subServicesToRun[-1][1].get('CONFIG')[0])
@@ -139,12 +139,12 @@ def listenMain(shareZone,serviceRunningList,subServicesToRun,):
                     instructionMark[-1]['end'] = audioBuffer.shape[0]
                     instructionBuffer = numpy.empty((0,channels),dtype=dtype)
                     instructionBuffer = audioBuffer[instructionMark[-1]['begin']:instructionMark[-1]['end']]
-                    instructionText = asyncio.run(basicTask.audioRecognization(instructionBuffer))
+                    instructionText = basicTask.audioToText(instructionBuffer)
                     # 更新共享区，将instructionText写入
-                    textList = localShareZone.get('readyToAudio')
-                    textList.append([instructionText,])
-                    localShareZone['readyToAudio'] = textList
-                    print(os.getpid(),threading.current_thread().ident,'Instruction over, the instruction text is:',localShareZone['readyToAudio'][-1])
+                    textList = localShareZone.get('userInstructions')
+                    textList.append(instructionText)
+                    localShareZone['userInstructions'] = textList
+                    print(os.getpid(),threading.current_thread().ident,'Instruction over, the instruction text is:',localShareZone['userInstructions'][-1])
                     file.audioStreamToWav(
                         instructionBuffer,
                         task = 'recordWaves',
@@ -217,11 +217,11 @@ def speechMain():
     return
 
 async def speech():
-    textToAudioTask = asyncio.create_task(textToAudio())
     audioToSpeechTask = asyncio.create_task(audioToSpeech())
-    
+    # For Test
+    testTask = asyncio.create_task(test())
     print(os.getpid(),threading.currentThread().ident,'Start async speech')
-    await asyncio.gather(audioToSpeechTask,textToAudioTask)
+    await asyncio.gather(audioToSpeechTask,testTask)
     print(os.getpid(),threading.currentThread().ident,'End async speech')
 
 async def audioToSpeech():
@@ -244,64 +244,26 @@ async def audioToSpeech():
             break
         # 延长步长到streamLenth/5，每秒5字，跟下面播放一致
         if localShareZone.get('readyToSpeech').__len__() == 0:
-            time.sleep(streamLenth/5)
+            await asyncio.sleep(streamLenth/5)
             continue
         # 是否有要说的话，如果有，流式
         while localShareZone.get('readyToSpeech').__len__() != 0:
-            print(os.getpid(),threading.currentThread().ident,'In')
-            # 播放分段
+            print(os.getpid(),threading.currentThread().ident,'Start to play the audio，and the remaining slice is:',localShareZone.get('readyToSpeech').__len__())
+            # 播放第一个分段
+            print(os.getpid(),threading.currentThread().ident,type(localShareZone.get('readyToSpeech')[0][0]))
             audioService.playStream(localShareZone.get('readyToSpeech')[0][0])
+            # 删除暂存文件（for debug），没想到啥太好的办法
+            # os.remove(localShareZone.get('readyToSpeech')[0][1]) 
             # 共享空间移除已经完成的speech
             readyToSpeechList = localShareZone.get('readyToSpeech')[1:]
             localShareZone['readyToSpeech'] = readyToSpeechList
-            # 删除暂存文件（for debug）
-            os.remove('asset/tts/wavs/'+localShareZone.get('readyToSpeech')[0][1]) 
+            
 
-async def textToAudio():
-    # 引用共享空间地址
-    global localShareZone
-    # stream的最小粒度
-    streamLenth = 10
-    model = ('BaiduAI','tts')
-    # 初始化模型服务
-    service = eval(model[0])()
-    print(os.getpid(),threading.currentThread().ident,'Start Text to Audio')
-    
+async def test():
+    print(os.getpid(),threading.currentThread().ident,'Test start when speech alive')
     while True:
-        print(os.getpid(),threading.currentThread().ident,time.time(),localShareZone.get('readyToAudio'))
-        # 判断是否有停止命令
+        # 判断是否停止
         if not localShareZone['dialogMark']['listenMark']:
             break
-        # 延长步长到streamLenth/5，每秒5字，跟下面播放一致
-        # readyToAudio没有可以转音频 or readyToSpeech >10 已经超过10条还未播放
-        # print(os.getpid(),threading.currentThread().ident,'The readyToAudio')
-        if localShareZone.get('readyToAudio').__len__() == 0 or localShareZone.get('readyToSpeech').__len__() >= 10:
-            time.sleep(streamLenth/5)
-            continue
-        # 文字转音频
-        else:
-            # assert localShareZone.get('readyToAudio').__len__() == 0
-            for instruction in localShareZone.get('readyToAudio'):
-                for text in instruction:
-                    
-                    while len(text) != 0:
-                        textSlice = text[0:streamLenth]
-                        # tts获取bytes并写入文件
-                        result = eval('service.'+model[1])(textSlice)
-                        readyToSpeechList = localShareZone.get('readyToSpeech')
-                        readyToSpeechList.append(result)
-                        localShareZone['readyToSpeech'] = readyToSpeechList
-                        
-                        # 每次完成后，截断text为没有的部分
-                        text = text[streamLenth:]
-                    print(os.getpid(),threading.currentThread().ident,instruction,'to text is completed')
-                    
-            # 共享空间移除已经完成的instruction
-            readyToAudioList = localShareZone.get('readyToAudio')[1:]
-            print(os.getpid(),threading.currentThread().ident,'The updated readyToAudio is:',readyToAudioList,)
-            localShareZone['readyToAudio'] = readyToAudioList       
-    
-    print(os.getpid(),threading.currentThread().ident,'End Text to Audio')
-
-def listen():
-    pass
+        await asyncio.sleep(2)
+    print(os.getpid(),threading.currentThread().ident,'Test end when speech alive')

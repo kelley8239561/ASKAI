@@ -4,38 +4,49 @@
 # GROUP: int, same GROUP means run in one process, 0 for default process
 # TARGET: target function for the service to execute
 
-SPEAKERSERVICE:
-  NAME: SpeakerService
-  MAIN: False
-  GROUP: 2
-  TARGET: task.voiceService.speechMain
+# SPEAKERSERVICE:
+#   NAME: SpeakerService
+#   MAIN: False
+#   GROUP: 2
+#   TARGET: task.voiceService.speechMain
 
-VOICELISTENSERVICE:
-  NAME: VoiceListenService
-  MAIN: True
-  GROUP: 2
-  TARGET: task.voiceService.listenMain
-  CONFIG: 
-    - conf/voiceListenServiceConfig.yaml
-    - AUDIORECORD
+# VOICELISTENSERVICE:
+#   NAME: VoiceListenService
+#   MAIN: True
+#   GROUP: 2
+#   TARGET: task.voiceService.listenMain
+#   CONFIG: 
+#     - conf/voiceListenServiceConfig.yaml
+#     - AUDIORECORD
+
+# TEXTSERVICE:
+#   NAME: TextService
+#   MAIN: True
+#   GROUP: 4
+#   TARGET: task.textService.textMain
+#   CONFIG: 
 
 KEYBOARDLISTENSERVICE: 
   NAME: KeyboardListenService
   MAIN: True
   GROUP: 1
-  TARGET: task.keyboardService.main
+  TARGET: task.keyboardService.keyboardMain
 
-TEST:
-  NAME: TestService
-  MAIN: False
-  GROUP: 1
-  TARGET: serviceTest.mainTest # Test
+# TEST:
+#   NAME: TestService
+#   MAIN: False
+#   GROUP: 1
+#   TARGET: serviceTest.mainTest # Test
 
-SCREENRECORDSERVICE:
-  NAME: ScreenRecordService
-  MAIN: True
-  GROUP: 3
-  TARGET: serviceTest.screenRecord # Test
+# SCREENRECORDSERVICE:
+#   NAME: ScreenRecordService
+#   MAIN: True
+#   GROUP: 3
+#   # TARGET: serviceTest.screenRecord # Test
+#   TARGET: task.screenRecordService.screenRecordMain
+#   CONFIG: 
+#     - conf/screenRecordServiceConfig.yaml
+#     - SCREENRECORD
 
 # TEST:
 #   NAME: ScreenRecordService

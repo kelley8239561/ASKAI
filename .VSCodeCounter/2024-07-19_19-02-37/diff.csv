@@ -1,0 +1,16 @@
+"filename", "language", "Python", "comment", "blank", "total"
+"d:\KAIShow Tech\20240605ASK\ASK\autoTest.py", "Python", 0, 0, 1, 1
+"d:\KAIShow Tech\20240605ASK\ASK\auto\apps\basic\basicAuto.py", "Python", 11, 0, 8, 19
+"d:\KAIShow Tech\20240605ASK\ASK\auto\apps\foxmail\foxmailAuto.py", "Python", 0, 0, 1, 1
+"d:\KAIShow Tech\20240605ASK\ASK\auto\apps\wechat\wechatAuto.py", "Python", 15, 5, 9, 29
+"d:\KAIShow Tech\20240605ASK\ASK\auto\devices\km.py", "Python", 11, 6, 6, 23
+"d:\KAIShow Tech\20240605ASK\ASK\langchainTest.py", "Python", 6, 9, 2, 17
+"d:\KAIShow Tech\20240605ASK\ASK\llmTest.py", "Python", 2, -2, 2, 2
+"d:\KAIShow Tech\20240605ASK\ASK\pywinautoTest.py", "Python", 13, 0, 2, 15
+"d:\KAIShow Tech\20240605ASK\ASK\task\dialogTask.py", "Python", 1, 1, 0, 2
+"d:\KAIShow Tech\20240605ASK\ASK\task\parser\taskParser.py", "Python", -1, 1, 0, 0
+"d:\KAIShow Tech\20240605ASK\ASK\task\planTask.py", "Python", 24, 14, 4, 42
+"d:\KAIShow Tech\20240605ASK\ASK\task\prompts\taskPrompts.py", "Python", 85, 0, 1, 86
+"d:\KAIShow Tech\20240605ASK\ASK\task\taskManager.py", "Python", 0, 1, 0, 1
+"d:\KAIShow Tech\20240605ASK\ASK\test.py", "Python", -3, 0, -1, -4
+"Total", "-", 164, 35, 35, 234

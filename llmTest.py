@@ -87,7 +87,7 @@ print(baiduService.asr(content))
 """
 
 
-#"""
+"""
 # Test for BaiduAI.tts()
 # 初始化baiduService
 baiduService = baiduAccess.BaiduAI()
@@ -99,5 +99,7 @@ result = baiduService.tts(content)
 audioService.playStream(result[0])
 print(result[1])
 
-#"""
+"""
+
+
 

@@ -11,7 +11,8 @@ import threading
 import numpy
 from models.cloud.baidu.baiduAccess import BaiduAI
 
-async def audioRecognization(data:numpy.ndarray):
+
+def audioToText(data:numpy.ndarray):
     print(os.getpid(),threading.current_thread().ident,'ASR Begin')
     targetModel = ('BaiduAI','asr')
     service = eval(targetModel[0])()
@@ -20,6 +21,21 @@ async def audioRecognization(data:numpy.ndarray):
     # print(os.getpid(),threading.current_thread().ident,result)
     return result
 
-async def textToAudio(data:str):
-    
-    return
+def textToAudio(data:str,model= ('BaiduAI','tts')):
+    service = eval(model[0])()
+    # tts获取bytes并写入文件(bytes,fileurl)
+    result = eval('service.'+model[1])(data)
+    print(os.getpid(),threading.currentThread().ident,'Text to Audio:',data,'is completed.')
+    # result = (bytes,fileurl)
+    return result
+
+# 图像结构化
+def imageStructurize(data):
+    pass
+
+def textEmbedding(data):
+    pass
+
+def imageEmbedding(data):
+    pass
+

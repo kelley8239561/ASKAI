@@ -1,0 +1,9 @@
+{
+    "current_shot":"image url/image tensor",
+    "task_instruction":"task instructions",
+    "bbox":[
+        "(left_up_x,left_up_y,right_down_x,right_down_y)",
+        "(left_up_x,left_up_y,right_down_x,right_down_y)",
+        "……"
+    ]
+}

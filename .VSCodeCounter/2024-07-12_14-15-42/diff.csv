@@ -1,0 +1,19 @@
+"filename", "language", "Python", "Markdown", "YAML", "comment", "blank", "total"
+"d:\KAIShow Tech\20240605ASK\ASK\README.md", "Markdown", 0, 32, 0, 0, 10, 42
+"d:\KAIShow Tech\20240605ASK\ASK\auto\devices\audio.py", "Python", 1, 0, 0, 0, 1, 2
+"d:\KAIShow Tech\20240605ASK\ASK\auto\devices\camera.py", "Python", 3, 0, 0, 1, 1, 5
+"d:\KAIShow Tech\20240605ASK\ASK\auto\devices\km.py", "Python", 3, 0, 0, 1, 1, 5
+"d:\KAIShow Tech\20240605ASK\ASK\auto\devices\screen.py", "Python", 19, 0, 0, 2, 7, 28
+"d:\KAIShow Tech\20240605ASK\ASK\auto\file\file.py", "Python", 7, 0, 0, 0, 3, 10
+"d:\KAIShow Tech\20240605ASK\ASK\conf\mainServiceConfig.yaml", "YAML", 0, 0, -15, 25, 1, 11
+"d:\KAIShow Tech\20240605ASK\ASK\conf\screenRecordServiceConfig.yaml", "YAML", 0, 0, 4, 1, 0, 5
+"d:\KAIShow Tech\20240605ASK\ASK\task\basicService.py", "Python", 13, 0, 0, 0, 3, 16
+"d:\KAIShow Tech\20240605ASK\ASK\task\basicTask.py", "Python", 9, 0, 0, 3, 5, 17
+"d:\KAIShow Tech\20240605ASK\ASK\task\screenRecordService.py", "Python", 79, 0, 0, 31, 22, 132
+"d:\KAIShow Tech\20240605ASK\ASK\task\serviceManager.py", "Python", 4, 0, 0, 3, 0, 7
+"d:\KAIShow Tech\20240605ASK\ASK\task\taskClass.py", "Python", 15, 0, 0, 0, 5, 20
+"d:\KAIShow Tech\20240605ASK\ASK\task\taskManager.py", "Python", 0, 0, 0, 0, 6, 6
+"d:\KAIShow Tech\20240605ASK\ASK\task\textService.py", "Python", 124, 0, 0, 43, 26, 193
+"d:\KAIShow Tech\20240605ASK\ASK\task\voiceService.py", "Python", -23, 0, 0, -9, -5, -37
+"d:\KAIShow Tech\20240605ASK\ASK\test.py", "Python", 3, 0, 0, 0, 1, 4
+"Total", "-", 257, 32, -11, 101, 87, 466

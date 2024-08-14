@@ -9,7 +9,7 @@ import os,psutil
 import time
 import keyboard
 from keyboard import KeyboardEvent
-from task import dialogTask
+from task import dialogTask, taskManager
 import threading
 from threading import Thread
 import serviceTest
@@ -22,7 +22,7 @@ localShareZone:dict
 
 
 
-def main(shareZone,serviceRunningList,subServicesToRun):
+def keyboardMain(shareZone,serviceRunningList,subServicesToRun):
     """
     # keyboardService main function
     # param
@@ -71,31 +71,37 @@ def main(shareZone,serviceRunningList,subServicesToRun):
     print(os.getpid(),shareZone)
     '''
     
-    # ctrl+a处理语音指令
+    # ctrl+a处理是否开启语音指令问题
     keyboard.add_hotkey(hotkey='ctrl+a',callback=dialogTask.AudioDialog.dialogMarkInstructionBegin,args=(time.time(),)) # 开始拾音
     keyboard.on_release_key(key='a',callback=dialogTask.AudioDialog.dialogMarkInstructionEnd) # 结束拾音
     #keyboard.add_hotkey(hotkey=,callback=)
     
+    # taskManager退出
+    keyboard.add_hotkey('ctrl+esc',callback=taskQuit)
     
-    
-    # 退出
-    keyboard.add_hotkey('ctrl+esc',callback=keyboardQuit)
+    # service退出：所有service都监听该文件
+    keyboard.add_hotkey('ctrl+esc',callback=serviceQuit)
     while keyboardQuitFlag:
         time.sleep(0.5)
     print(os.getpid(),'Quit successfully')
     # 测试是否成功记录，并且写入共享内存
-    print(os.getpid(),"The dialog record mark is")
-    print(os.getpid(),shareZone)
+    # print(os.getpid(),threading.current_thread().ident,"The dialog record mark is")
+    # print(os.getpid(),threading.current_thread().ident,shareZone)
     
     # 多线程结束合并
     for thread in tList:
         thread.join()
     
     return
+
+def taskQuit():
+    global localShareZone
+    localShareZone['sysQuit'] = 0
+    print(os.getpid(),threading.current_thread().ident,'Send quit command to task manager.')
     
-def keyboardQuit():
+def serviceQuit():
     global keyboardQuitFlag,localShareZone
-    print(os.getpid(),"Quit from the keyboard command")
+    print(os.getpid(),threading.current_thread().ident,"Quit all services from the keyboard command")
     keyboard.unhook_all()
     keyboardQuitFlag = False
     # 将中止指令传给其他服务：1、音频录制服务listenMain，2、

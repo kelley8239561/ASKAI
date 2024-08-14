@@ -15,6 +15,7 @@ def getTemplate():
     pass
 
 
+# 简单对话使用
 simpleChatPrompt = ChatPromptTemplate.from_messages(
     [
         SystemMessagePromptTemplate(
@@ -42,6 +43,7 @@ simpleChatPrompt = ChatPromptTemplate.from_messages(
 )
 
 '''
+# for Debug
 chat_prompt.format_prompt(
     input_language="haha", 
     output_language="hoho", 
@@ -49,5 +51,6 @@ chat_prompt.format_prompt(
     lastResponse='lalalala'
 ).to_messages()
 '''
+
 
 

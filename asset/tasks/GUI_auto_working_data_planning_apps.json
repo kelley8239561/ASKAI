@@ -1,0 +1,22 @@
+{
+    "current_shot":"image url/image tensor",
+    "task_instruction":"task instructions",
+    "task_objective":"task objective",
+    "task_plan":[
+        {
+            "app":"appid / api",
+            "subtask_instrction":"subtask instructions",
+            "subtask_objective":"subtask objective",
+            "calling_url":"endpoint and parameters"
+        },
+        {
+            "app":"appid / api",
+            "subtask_instrction":"subtask instructions",
+            "subtask_objective":"subtask objective",
+            "calling_url":"endpoint and parameters"
+        },
+        {
+            "……":"……"
+        }
+    ]
+}

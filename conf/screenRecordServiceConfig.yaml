@@ -1,0 +1,5 @@
+# SCREENRECORD:
+SCREENRECORD:
+  fps: 12
+  saveURL: asset/recordings/videos
+  audioLenth: 30 # frame

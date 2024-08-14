@@ -1,6 +1,8 @@
 import os
+import time
 import wave,psutil
 import soundfile
+from PIL import Image
 
 path = {
     'recordWaves':'asset/recordings/wavs/',
@@ -8,12 +10,15 @@ path = {
     'ttsWaves':'asset/tts/wavs/',
     'ttsPcms':'asset/tts/pcms/',
     'errorLog':'asset/logs/error.txt',
+    'llmLog' : 'asset/logs/chat.txt',
+    'screenShot':'asse,t/recordings/pics/screenShot'
 }
 
 def getPath(task):
     global path
     return path[task]
 
+# audio 转成 wav文件并保存
 def audioStreamToWav(data,task,filename,samplerate,channels,sampwidth):
     """
     #通过soundfile.write()方式
@@ -41,7 +46,8 @@ def audioStreamToWav(data,task,filename,samplerate,channels,sampwidth):
         # 写入数据
         wavFile.writeframes(audioData)
     print(os.getpid(),'Write result to ' + filePath + filename)
-    
+   
+# audio 转成 pcm文件并保存 
 def audioStreamToPCM(data,task,filename,samplerate,channels,sampwidth,comptype = "NONE",compname = "not compressed"):
     filePath = getPath(task)
     filename = filename+'.pcm'
@@ -58,7 +64,14 @@ def audioStreamToPCM(data,task,filename,samplerate,channels,sampwidth,comptype =
         pcmFile.setparams((nchannels, sampwidth, framerate, nframes, comptype, compname))
         pcmFile.writeframes(audioData)
     print(os.getpid(),'Write result to ' + filePath + filename)
-    
+
+# image 存储未png图像
+def picSave(image,fileName=str(time.time())+'.png'):
+    if isinstance(image,Image.Image):
+        image.save(getPath('screenShot')+fileName)
+
+
+ 
 # for Test 清空文件列表 
 def emptyDir(urls):
     for url in urls:

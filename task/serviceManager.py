@@ -5,8 +5,9 @@ Execute he main logic of the service running.
 from ast import Lambda
 import multiprocessing
 import time
+from conf import initial
 import task
-from task import keyboardService,voiceService
+from task import keyboardService, textService, voiceService, screenRecordService
 from multiprocessing import Process,Manager
 from threading import Thread
 import os,psutil,threading
@@ -17,23 +18,19 @@ import serviceTest
 # 服务列表
 serviceList = ()
 
+# 共享空间
+shareZone:dict
+
 def main():
     global serviceList
-    # 开辟dataManager，用于进程间数据共享
-    dataManager = Manager()
-    serviceDataShareZone = dataManager.dict({
-        # 对话记录，Mark标记
-        'dialogMark' : { 
-            'instructionMark':[], # 语音指令接收标记
-            'listenMark':True,
-        },
-        # 需要进行语音的文字,list of str
-        'readyToAudio' : [],
-        # 需要进行播放的audio，list of ndarray
-        'readyToSpeech': [],
-    })
+    # 引用进程间数据共享
+    global shareZone
+    # config放入共享空间
+    shareZone['config'] = initial.myConfig.configData
     
     # 已经运行的服务进程和线程列表
+    
+    dataManager = Manager()
     serviceRunningList = dataManager.list([
         {
             'GROUP':0,
@@ -100,7 +97,7 @@ def main():
         if service[1].get('MAIN'):
             print(os.getpid(),"Start service :",service[0])
             print(os.getpid(),"Target function is:",service[1].get('TARGET'))
-            p = Process(target=eval(service[1].get('TARGET')),args=(serviceDataShareZone,serviceRunningList,subServicesToRun),name=service[1].get('NAME'))
+            p = Process(target=eval(service[1].get('TARGET')),args=(shareZone,serviceRunningList,subServicesToRun),name=service[1].get('NAME'))
             # 将依赖于该进程启动的服务传入，清空暂存的列表，以便后用
             subServicesToRun = []
             # 修改运行状态
@@ -150,20 +147,23 @@ def main():
     
     # recycle processes
     for p in pList:
-        print(os.getpid(),'endend',p.name)
+        print(os.getpid(),threading.current_thread().ident,'Main end',p.name)
         p.join()
     
-def start(caller,serviceConfig):
+def start(serviceConfig,crossProcessDataZone):
     """
     _summary_
     Start the service manager manually
     
     """
-    print(os.getpid(),'Service manager starting...  from',caller)
+    print(os.getpid(),threading.current_thread().ident,'Service manager start...')
     global serviceList
     #获取要启动的service
     serviceList = list(serviceConfig.items())
     #print(os.getpid(),serviceList)
+    # 初始化共享空间
+    global shareZone
+    shareZone = crossProcessDataZone
     main()
     print(os.getpid(),"Services have already closed")
     return

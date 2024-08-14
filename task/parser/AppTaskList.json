@@ -1,0 +1,35 @@
+{
+    "taskInstruction":"给微软客服发送一封报修邮件",
+    "tasks":[
+        {
+            "app":"应用搜索",
+            "task":"搜索并打开Foxmail",
+            "objective":"Foxmail打开"
+        },
+        {
+            "app":"Foxmail",
+            "task":"登录账号",
+            "objective":"账号登录完成"
+        },
+        {
+            "app":"语音对话",
+            "task":"调用语音对话api，询问并记录邮件关键内容",
+            "objective":"获取邮件关键内容<content>"
+        },
+        {
+            "app":"文案生成",
+            "task":"调用文案生成api，通过输入邮件关键内容<content>，获取完整邮件<mail>",
+            "objective":"生成完整邮件<mail>"
+        },
+        {
+            "app":"Foxmail",
+            "task":"发送完整邮件<mail>",
+            "objective":"完成给微软客服发送一封报修邮件"
+        },
+        {
+            "app":"应用搜索",
+            "task":"搜索并打开Foxmail",
+            "objective":"Foxmail打开"
+        }
+    ]
+}

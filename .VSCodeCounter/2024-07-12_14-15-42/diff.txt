@@ -1,0 +1,49 @@
+Date : 2024-07-12 14:15:42
+Directory : d:\KAIShow Tech\20240605ASK\ASK
+Total : 17 files,  278 codes, 101 comments, 87 blanks, all 466 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |         14 |        257 |         75 |         76 |        408 |
+| Markdown |          1 |         32 |          0 |         10 |         42 |
+| YAML     |          2 |        -11 |         26 |          1 |         16 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                   |         17 |        278 |        101 |         87 |        466 |
+| . (Files)                                                           |          2 |         35 |          0 |         11 |         46 |
+| auto                                                                |          5 |         33 |          4 |         13 |         50 |
+| auto\devices                                                        |          4 |         26 |          4 |         10 |         40 |
+| auto\file                                                           |          1 |          7 |          0 |          3 |         10 |
+| conf                                                                |          2 |        -11 |         26 |          1 |         16 |
+| task                                                                |          8 |        221 |         71 |         62 |        354 |
++---------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                            | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\KAIShow Tech\20240605ASK\ASK\README.md                           | Markdown |         32 |          0 |         10 |         42 |
+| d:\KAIShow Tech\20240605ASK\ASK\auto\devices\audio.py               | Python   |          1 |          0 |          1 |          2 |
+| d:\KAIShow Tech\20240605ASK\ASK\auto\devices\camera.py              | Python   |          3 |          1 |          1 |          5 |
+| d:\KAIShow Tech\20240605ASK\ASK\auto\devices\km.py                  | Python   |          3 |          1 |          1 |          5 |
+| d:\KAIShow Tech\20240605ASK\ASK\auto\devices\screen.py              | Python   |         19 |          2 |          7 |         28 |
+| d:\KAIShow Tech\20240605ASK\ASK\auto\file\file.py                   | Python   |          7 |          0 |          3 |         10 |
+| d:\KAIShow Tech\20240605ASK\ASK\conf\mainServiceConfig.yaml         | YAML     |        -15 |         25 |          1 |         11 |
+| d:\KAIShow Tech\20240605ASK\ASK\conf\screenRecordServiceConfig.yaml | YAML     |          4 |          1 |          0 |          5 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\basicService.py                | Python   |         13 |          0 |          3 |         16 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\basicTask.py                   | Python   |          9 |          3 |          5 |         17 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\screenRecordService.py         | Python   |         79 |         31 |         22 |        132 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\serviceManager.py              | Python   |          4 |          3 |          0 |          7 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\taskClass.py                   | Python   |         15 |          0 |          5 |         20 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\taskManager.py                 | Python   |          0 |          0 |          6 |          6 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\textService.py                 | Python   |        124 |         43 |         26 |        193 |
+| d:\KAIShow Tech\20240605ASK\ASK\task\voiceService.py                | Python   |        -23 |         -9 |         -5 |        -37 |
+| d:\KAIShow Tech\20240605ASK\ASK\test.py                             | Python   |          3 |          0 |          1 |          4 |
+| Total                                                               |          |        278 |        101 |         87 |        466 |
++---------------------------------------------------------------------+----------+------------+------------+------------+------------+
