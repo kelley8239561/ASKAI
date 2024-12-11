@@ -1,0 +1,108 @@
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.entity_normalization - 
+Parse dict 
+{'message_id': 2, 'sender': None, 'receiver': None, 'content': None, 'time_generate': None, 'source': None}
+to <class 'data_entity.message.Message'>
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+The calling class is 
+<class 'data_entity.message.Message'>
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+The calling class is 
+<class 'data_entity.message.Message'>
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+True
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+message_id -- same attribute name
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+True
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+sender -- same attribute name
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+True
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+receiver -- same attribute name
+
+2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+True
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+content -- same attribute name
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+True
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+time_generate -- same attribute name
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+True
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+source -- same attribute name
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+All attribute name match
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+('message_id', 2) -- same attribute value type
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+('sender', None) -- NoneType
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+('receiver', None) -- NoneType
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+('content', None) -- NoneType
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+('time_generate', None) -- NoneType
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+('source', None) -- NoneType
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+Attribute ('source', <enum 'Message_Source'>) match over
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+All attribute match
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+In class <class 'data_entity.message.Message'> __init__()
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+<class 'data_entity.message.Message'>.message_id Initialing!
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+<class 'data_entity.message.Message'>.sender Initialing!
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+<class 'data_entity.message.Message'>.receiver Initialing!
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+<class 'data_entity.message.Message'>.content Initialing!
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+<class 'data_entity.message.Message'>.time_generate Initialing!
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+<class 'data_entity.message.Message'>.source Initialing!
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
+<class 'data_entity.message.Message'>Initial over!
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
+The calling class is 
+<class 'data_entity.message.Message'>
+
+2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - capacities.basic.db.operation_db - 
+The update sql is 
+DELETE FROM Message WHERE message_id = ?
+

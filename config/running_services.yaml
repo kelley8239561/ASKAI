@@ -1,0 +1,100 @@
+# service configuration
+# NAME: function name of service
+# MAIN: True for main service in the process and false is not. Only one True in the same GROUP  
+# GROUP: int, same GROUP means run in one process, 0 for default process
+# TARGET: target function for the service to execute
+
+config_name: running_services
+config_content:
+  - name: instruction_route_service
+    main: True
+    group: 5
+    target: services.service_router.router_main
+    config: 
+  
+  - name: chat_service
+    main: True
+    group: 2
+    target: debug.service_test.test_main
+    config: 
+
+  - name: task_plan_service
+    main: True
+    group: 3
+    target: debug.service_test.test_main
+    config: 
+
+  - name: action_execute_service
+    main: True
+    group: 4
+    target: debug.service_test.test_main
+    config: 
+  
+  - name: record_service
+    main: True
+    group: 1
+    target: debug.service_test.test_main
+    config: 
+
+
+
+
+
+
+# SPEAKERSERVICE:
+#   NAME: SpeakerService
+#   MAIN: False
+#   GROUP: 2
+#   TARGET: task.voiceService.speechMain
+
+# VOICELISTENSERVICE:
+#   NAME: VoiceListenService
+#   MAIN: True
+#   GROUP: 2
+#   TARGET: task.voiceService.listenMain
+#   CONFIG: 
+#     - conf/voiceListenServiceConfig.yaml
+#     - AUDIORECORD
+
+# TEXTSERVICE:
+#   NAME: TextService
+#   MAIN: True
+#   GROUP: 4
+#   TARGET: task.textService.textMain
+#   CONFIG: 
+
+# KEYBOARDLISTENSERVICE: 
+#   NAME: KeyboardListenService
+#   MAIN: True
+#   GROUP: 1
+#   TARGET: task.keyboardService.keyboardMain
+
+# TEST:
+#   NAME: TestService
+#   MAIN: False
+#   GROUP: 1
+#   TARGET: serviceTest.mainTest # Test
+
+# SCREENRECORDSERVICE:
+#   NAME: ScreenRecordService
+#   MAIN: True
+#   GROUP: 3
+#   # TARGET: serviceTest.screenRecord # Test
+#   TARGET: task.screenRecordService.screenRecordMain
+#   CONFIG: 
+#     - conf/screenRecordServiceConfig.yaml
+#     - SCREENRECORD
+
+# TEST:
+#   NAME: ScreenRecordService
+#   MAIN: False
+#   GROUP: 2
+#   TARGET: 
+
+
+
+
+
+
+
+

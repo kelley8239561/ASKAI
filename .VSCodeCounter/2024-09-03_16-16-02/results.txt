@@ -1,0 +1,133 @@
+Date : 2024-09-03 16:16:02
+Directory : d:\KAIShow Tech\20240605ASK\ASK
+Total : 75 files,  4044 codes, 846 comments, 812 blanks, all 5702 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |         59 |      3,489 |        796 |        716 |      5,001 |
+| JSON     |          5 |        175 |          0 |          1 |        176 |
+| Log      |          2 |        169 |          0 |         53 |        222 |
+| Excel    |          1 |         94 |          0 |          0 |         94 |
+| Markdown |          1 |         72 |          0 |         10 |         82 |
+| YAML     |          4 |         38 |         50 |         32 |        120 |
+| SQL      |          3 |          7 |          0 |          0 |          7 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                      | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                         |         75 |      4,044 |        846 |        812 |      5,702 |
+| . (Files)                                                                                 |          3 |        123 |         15 |         24 |        162 |
+| GUIs                                                                                      |          1 |          6 |          0 |          4 |         10 |
+| accounts                                                                                  |          2 |          0 |          0 |          2 |          2 |
+| capacities                                                                                |          6 |        689 |         14 |         30 |        733 |
+| capacities\basic                                                                          |          1 |         11 |          2 |          2 |         15 |
+| capacities\parser                                                                         |          3 |        128 |          3 |          5 |        136 |
+| capacities\prompts                                                                        |          2 |        550 |          9 |         23 |        582 |
+| config                                                                                    |          5 |        115 |         68 |         51 |        234 |
+| data                                                                                      |          8 |        230 |          1 |         13 |        244 |
+| data (Files)                                                                              |          1 |         70 |          1 |         13 |         84 |
+| data\apps                                                                                 |          1 |         94 |          0 |          0 |         94 |
+| data\tasks                                                                                |          6 |         66 |          0 |          0 |         66 |
+| debug                                                                                     |          9 |        179 |        117 |         65 |        361 |
+| gui_auto                                                                                  |          8 |        328 |        115 |         88 |        531 |
+| gui_auto\apps                                                                             |          3 |         29 |          9 |         27 |         65 |
+| gui_auto\apps\basic                                                                       |          1 |         11 |          0 |          8 |         19 |
+| gui_auto\apps\foxmail                                                                     |          1 |          0 |          0 |          1 |          1 |
+| gui_auto\apps\wechat                                                                      |          1 |         18 |          9 |         18 |         45 |
+| gui_auto\devices                                                                          |          4 |        238 |         93 |         50 |        381 |
+| gui_auto\file                                                                             |          1 |         61 |         13 |         11 |         85 |
+| logs                                                                                      |          4 |        239 |         14 |         64 |        317 |
+| model_factory                                                                             |          4 |        777 |        127 |        108 |      1,012 |
+| model_factory\cloud                                                                       |          4 |        777 |        127 |        108 |      1,012 |
+| model_factory\cloud\baidu                                                                 |          1 |        230 |         35 |         34 |        299 |
+| model_factory\cloud\teleAI                                                                |          1 |        191 |         76 |         25 |        292 |
+| model_factory\cloud\volcengine                                                            |          1 |        311 |          9 |         38 |        358 |
+| model_factory\cloud\zhipuai                                                               |          1 |         45 |          7 |         11 |         63 |
+| services                                                                                  |         25 |      1,358 |        375 |        363 |      2,096 |
++-------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                  | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| d:\KAIShow Tech\20240605ASK\ASK\ASKAI.py                                                  | Python   |          7 |          1 |          1 |          9 |
+| d:\KAIShow Tech\20240605ASK\ASK\GUIs\gui.py                                               | Python   |          6 |          0 |          4 |         10 |
+| d:\KAIShow Tech\20240605ASK\ASK\README.md                                                 | Markdown |         72 |          0 |         10 |         82 |
+| d:\KAIShow Tech\20240605ASK\ASK\accounts\cost_computing.py                                | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\accounts\login.py                                         | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\capacities\basic\km_operations.py                         | Python   |         11 |          2 |          2 |         15 |
+| d:\KAIShow Tech\20240605ASK\ASK\capacities\parser\AppTaskList.json                        | JSON     |         35 |          0 |          0 |         35 |
+| d:\KAIShow Tech\20240605ASK\ASK\capacities\parser\jsonTest.json                           | JSON     |         81 |          0 |          1 |         82 |
+| d:\KAIShow Tech\20240605ASK\ASK\capacities\parser\taskParser.py                           | Python   |         12 |          3 |          4 |         19 |
+| d:\KAIShow Tech\20240605ASK\ASK\capacities\prompts\chatPrompts.py                         | Python   |         47 |          2 |          8 |         57 |
+| d:\KAIShow Tech\20240605ASK\ASK\capacities\prompts\taskPrompts.py                         | Python   |        503 |          7 |         15 |        525 |
+| d:\KAIShow Tech\20240605ASK\ASK\config\config_file_list.yaml                              | YAML     |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\config\config_operations.py                               | Python   |         77 |         18 |         19 |        114 |
+| d:\KAIShow Tech\20240605ASK\ASK\config\running_services.yaml                              | YAML     |         27 |         48 |         26 |        101 |
+| d:\KAIShow Tech\20240605ASK\ASK\config\screenRecordServiceConfig.yaml                     | YAML     |          4 |          1 |          0 |          5 |
+| d:\KAIShow Tech\20240605ASK\ASK\config\voiceListenServiceConfig.yaml                      | YAML     |          7 |          1 |          5 |         13 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\apps\WindowAppList.xlsx                              | Excel    |         94 |          0 |          0 |         94 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\taskDBO.py                                           | Python   |         70 |          1 |         13 |         84 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\tasks\AddTask07132325.sql                            | SQL      |          5 |          0 |          0 |          5 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\tasks\GUI_auto_working_data_grounding.json           | JSON     |          9 |          0 |          0 |          9 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\tasks\GUI_auto_working_data_planning_apps.json       | JSON     |         22 |          0 |          0 |         22 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\tasks\GUI_auto_working_data_planning_operations.json | JSON     |         28 |          0 |          0 |         28 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\tasks\deleteAll.sql                                  | SQL      |          1 |          0 |          0 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\data\tasks\selectAll.sql                                  | SQL      |          1 |          0 |          0 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\autoTest.py                                         | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\dbTest.py                                           | Python   |          9 |          0 |          3 |         12 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\dialogTest.py                                       | Python   |         44 |         17 |         10 |         71 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\general_test.py                                     | Python   |          8 |         58 |         13 |         79 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\langchainTest.py                                    | Python   |         18 |         13 |          3 |         34 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\llmTest.py                                          | Python   |         66 |         13 |         27 |        106 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\processTest.py                                      | Python   |          6 |         12 |          3 |         21 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\pywinautoTest.py                                    | Python   |         13 |          0 |          2 |         15 |
+| d:\KAIShow Tech\20240605ASK\ASK\debug\service_test.py                                     | Python   |         15 |          4 |          3 |         22 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\apps\basic\basicAuto.py                          | Python   |         11 |          0 |          8 |         19 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\apps\foxmail\foxmailAuto.py                      | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\apps\wechat\wechatAuto.py                        | Python   |         18 |          9 |         18 |         45 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\devices\audio.py                                 | Python   |        202 |         83 |         35 |        320 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\devices\camera.py                                | Python   |          3 |          1 |          1 |          5 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\devices\km.py                                    | Python   |         14 |          7 |          7 |         28 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\devices\screen.py                                | Python   |         19 |          2 |          7 |         28 |
+| d:\KAIShow Tech\20240605ASK\ASK\gui_auto\file\file.py                                     | Python   |         61 |         13 |         11 |         85 |
+| d:\KAIShow Tech\20240605ASK\ASK\logs\__init__.py                                          | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\logs\log_ASKAI.log                                        | Log      |        169 |          0 |         52 |        221 |
+| d:\KAIShow Tech\20240605ASK\ASK\logs\logging_operation.py                                 | Python   |         70 |         14 |         10 |         94 |
+| d:\KAIShow Tech\20240605ASK\ASK\logs\services.service_main.log                            | Log      |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\main.py                                                   | Python   |         44 |         14 |         13 |         71 |
+| d:\KAIShow Tech\20240605ASK\ASK\model_factory\cloud\baidu\baiduAccess.py                  | Python   |        230 |         35 |         34 |        299 |
+| d:\KAIShow Tech\20240605ASK\ASK\model_factory\cloud\teleAI\teleAIAccess.py                | Python   |        191 |         76 |         25 |        292 |
+| d:\KAIShow Tech\20240605ASK\ASK\model_factory\cloud\volcengine\streaming_asr_demo.py      | Python   |        311 |          9 |         38 |        358 |
+| d:\KAIShow Tech\20240605ASK\ASK\model_factory\cloud\zhipuai\zhipuaiAccess.py              | Python   |         45 |          7 |         11 |         63 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\basicService.py                                  | Python   |        124 |          0 |         46 |        170 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\basicTask.py                                     | Python   |         27 |          4 |         11 |         42 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\dialogTask.py                                    | Python   |        176 |         51 |         38 |        265 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\intentionTask.py                                 | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\keyboardService.py                               | Python   |         80 |         18 |         30 |        128 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\multiprocess_manager.py                          | Python   |        149 |         33 |         28 |        210 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\navigationTask.py                                | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\planTask.py                                      | Python   |         81 |         20 |         18 |        119 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\screenRecordService.py                           | Python   |         79 |         31 |         22 |        132 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\serviceManager.py                                | Python   |        101 |         58 |         22 |        181 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_action_manager.py                        | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_audiorouter.py                           | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_listening.py                             | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_main.py                                  | Python   |         74 |         24 |         16 |        114 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_memory_generation.py                     | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_model_manager.py                         | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_record.py                                | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_router.py                                | Python   |         22 |          9 |         23 |         54 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_speaking.py                              | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\service_task_manager.py                          | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\taskClass.py                                     | Python   |         44 |          0 |         13 |         57 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\taskManager.py                                   | Python   |         98 |         25 |         28 |        151 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\textService.py                                   | Python   |        124 |         43 |         26 |        193 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\timerService.py                                  | Python   |          0 |          0 |          1 |          1 |
+| d:\KAIShow Tech\20240605ASK\ASK\services\voiceService.py                                  | Python   |        179 |         59 |         31 |        269 |
+| Total                                                                                     |          |      4,044 |        846 |        812 |      5,702 |
++-------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
