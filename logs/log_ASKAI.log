@@ -1,108 +1,146 @@
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.entity_normalization - 
-Parse dict 
-{'message_id': 2, 'sender': None, 'receiver': None, 'content': None, 'time_generate': None, 'source': None}
-to <class 'data_entity.message.Message'>
+2025-03-21 11:40:19,133 - CRITICAL - 19408 - 9480 - __main__ - 
+Welcome to ASKAI
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-The calling class is 
-<class 'data_entity.message.Message'>
+2025-03-21 11:40:19,133 - Level 1 - 19408 - 9480 - services.service_main - 
+main service start...
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-The calling class is 
-<class 'data_entity.message.Message'>
+2025-03-21 11:40:19,151 - Level 1 - 19408 - 9480 - services.multiprocess_manager - 
+Initial service_list.
+[{'name': 'record_service', 'main': True, 'group': 1, 'target': 'debug.service_test.test_main', 'config': None}, {'name': 'chat_service', 'main': True, 'group': 2, 'target': 'debug.service_test.test_main', 'config': None}, {'name': 'task_plan_service', 'main': True, 'group': 3, 'target': 'debug.service_test.test_main', 'config': None}, {'name': 'action_execute_service', 'main': True, 'group': 4, 'target': 'debug.service_test.test_main', 'config': None}, {'name': 'instruction_route_service', 'main': True, 'group': 5, 'target': 'services.service_router.router_main', 'config': None}]
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-True
+2025-03-21 11:40:19,604 - Level 1 - 19408 - 9480 - services.multiprocess_manager - 
+Initial the data zone.
+{'service_control': {'service_main_quit': False}, 'service_info': []}
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-message_id -- same attribute name
+2025-03-21 11:40:19,664 - Level 1 - 19408 - 9480 - capacities.basic.operation_km - 
+Initial hotkeys.
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-True
+2025-03-21 11:40:19,665 - Level 1 - 19408 - 9480 - services.service_main - 
+Get the process_list 5 
+[<Process name='record_service' parent=19408 initial>, <Process name='chat_service' parent=19408 initial>, <Process name='task_plan_service' parent=19408 initial>, <Process name='action_execute_service' parent=19408 initial>, <Process name='instruction_route_service' parent=19408 initial>]
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-sender -- same attribute name
+2025-03-21 11:40:19,669 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process record_service
+        group:1
+        target:debug.service_test.test_main
+        pid:8232
+        state:activate
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-True
+2025-03-21 11:40:19,674 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process chat_service
+        group:2
+        target:debug.service_test.test_main
+        pid:34780
+        state:activate
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-receiver -- same attribute name
+2025-03-21 11:40:19,681 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process task_plan_service
+        group:3
+        target:debug.service_test.test_main
+        pid:24696
+        state:activate
 
-2024-10-21 16:18:59,918 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-True
+2025-03-21 11:40:19,687 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process action_execute_service
+        group:4
+        target:debug.service_test.test_main
+        pid:25744
+        state:activate
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-content -- same attribute name
+2025-03-21 11:40:19,692 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process instruction_route_service
+        group:5
+        target:services.service_router.router_main
+        pid:19868
+        state:activate
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-True
+2025-03-21 11:40:19,840 - Level 1 - 34780 - 28228 - debug.service_test - 
+chat_service service is going to work.......
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-time_generate -- same attribute name
+2025-03-21 11:40:19,842 - Level 1 - 24696 - 32772 - debug.service_test - 
+task_plan_service service is going to work.......
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-True
+2025-03-21 11:40:19,843 - Level 1 - 8232 - 19032 - debug.service_test - 
+record_service service is going to work.......
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-source -- same attribute name
+2025-03-21 11:40:19,843 - Level 1 - 25744 - 31484 - debug.service_test - 
+action_execute_service service is going to work.......
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-All attribute name match
+2025-03-21 11:40:24,840 - Level 1 - 34780 - 28228 - debug.service_test - 
+chat_service service works all done, back to service_main and set the chat_service_quit flag True
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-('message_id', 2) -- same attribute value type
+2025-03-21 11:40:24,844 - Level 1 - 8232 - 19032 - debug.service_test - 
+record_service service works all done, back to service_main and set the record_service_quit flag True
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-('sender', None) -- NoneType
+2025-03-21 11:40:24,845 - Level 1 - 24696 - 32772 - debug.service_test - 
+task_plan_service service works all done, back to service_main and set the task_plan_service_quit flag True
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-('receiver', None) -- NoneType
+2025-03-21 11:40:24,845 - Level 1 - 25744 - 31484 - debug.service_test - 
+action_execute_service service works all done, back to service_main and set the action_execute_service_quit flag True
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-('content', None) -- NoneType
+2025-03-21 11:40:24,857 - Level 1 - 19408 - 9480 - services.service_main - 
+Quit process chat_service
+        group:2
+        target:debug.service_test.test_main
+        pid:34780
+        state:stop
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-('time_generate', None) -- NoneType
+2025-03-21 11:40:24,864 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process chat_service
+        group:2
+        target:debug.service_test.test_main
+        pid:27056
+        state:activate
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-('source', None) -- NoneType
+2025-03-21 11:40:24,865 - Level 1 - 19408 - 9480 - services.service_main - 
+Quit process task_plan_service
+        group:3
+        target:debug.service_test.test_main
+        pid:24696
+        state:stop
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-Attribute ('source', <enum 'Message_Source'>) match over
+2025-03-21 11:40:24,866 - Level 1 - 19408 - 9480 - services.service_main - 
+Quit process action_execute_service
+        group:4
+        target:debug.service_test.test_main
+        pid:25744
+        state:stop
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-All attribute match
+2025-03-21 11:40:24,866 - Level 1 - 19408 - 9480 - services.service_main - 
+Quit process instruction_route_service
+        group:5
+        target:services.service_router.router_main
+        pid:19868
+        state:stop
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-In class <class 'data_entity.message.Message'> __init__()
+2025-03-21 11:40:24,872 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process instruction_route_service
+        group:5
+        target:services.service_router.router_main
+        pid:31124
+        state:activate
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-<class 'data_entity.message.Message'>.message_id Initialing!
+2025-03-21 11:40:24,872 - Level 1 - 19408 - 9480 - services.service_main - 
+Quit process record_service
+        group:1
+        target:debug.service_test.test_main
+        pid:8232
+        state:stop
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-<class 'data_entity.message.Message'>.sender Initialing!
+2025-03-21 11:40:24,999 - Level 1 - 27056 - 25356 - debug.service_test - 
+chat_service service is going to work.......
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-<class 'data_entity.message.Message'>.receiver Initialing!
+2025-03-21 11:40:27,877 - Level 1 - 19408 - 9480 - services.service_main - 
+Quit process instruction_route_service
+        group:5
+        target:services.service_router.router_main
+        pid:31124
+        state:stop
 
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-<class 'data_entity.message.Message'>.content Initialing!
-
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-<class 'data_entity.message.Message'>.time_generate Initialing!
-
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-<class 'data_entity.message.Message'>.source Initialing!
-
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.message - 
-<class 'data_entity.message.Message'>Initial over!
-
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - data_entity.basic_class - 
-The calling class is 
-<class 'data_entity.message.Message'>
-
-2024-10-21 16:18:59,922 - Level 1 - 25372 - 35816 - capacities.basic.db.operation_db - 
-The update sql is 
-DELETE FROM Message WHERE message_id = ?
+2025-03-21 11:40:27,886 - Level 1 - 19408 - 9480 - services.service_main - 
+Start process instruction_route_service
+        group:5
+        target:services.service_router.router_main
+        pid:32476
+        state:activate
 
